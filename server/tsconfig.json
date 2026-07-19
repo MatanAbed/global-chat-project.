@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                          // גרסת ה-JS אליה הקוד יקומפל
+    "module": "NodeNext",                        // ניהול מודולים מודרני שמתאים ל-Node.js
+    "moduleResolution": "NodeNext",
+    "rootDir": "../",                            // מאפשר לקומפיילר לראות גם את common.ts שבשורש
+    "outDir": "./dist",                          // תיקיית היעד אליה יישפכו הקבצים המקומפלים
+    "esModuleInterop": true,                     // מאפשר ייבוא חלק של ספריות CommonJS
+    "forceConsistentCasingInFileNames": true,    // הקפדה על אותיות גדולות/קטנות בשמות קבצים
+    "strict": true,                              // הפעלת בדיקות טייפים מחמירות לטובת קוד איכותי
+    "skipLibCheck": true                         // דילוג על בדיקת טייפים בתוך node_modules לשיפור מהירות
+  },
+  "include": [
+    "**/*",                                      // כולל את כל הקבצים בתיקיית server
+    "../common.ts"                               // כולל במפורש את קובץ הטייפים המשותף שבשורש
+  ]
+}
