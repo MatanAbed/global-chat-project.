@@ -58,15 +58,16 @@ npm run dev
 
 📂 מבנה התיקיות בפרויקט
 
-├── server/               # תיקיית קוד השרת הראשי
-│   ├── config/           # קבצי הגדרות והתחברות (Mongoose ,AWS S3)
-│   ├── middleware/       # מידלוורים לאימות משתמשים (isLoggedIn) והעלאת קבצים
-│   ├── models/           # מודלים של Mongoose (User.ts, Message.ts)
-│   ├── routes/           # נתיבי ה-REST API (auth.ts, users.ts)
-│   ├── schemas/          # סכמות ולידציה של נתוני בקשות
-│   ├── sockets/          # לוגיקת שרת ה-WebSocket וניהול האירועים (chat.socket.ts)
-│   ├── server.ts         # נקודת המפגש והכניסה הראשית של השרת
-│   └── tsconfig.json     # קובץ קונפיגורציה של TypeScript
-├── .env                  # קובץ משתני סביבה סודיים (מוסתר ומאובטח)
-├── .gitignore            # הגדרת תיקיות וקבצים שאין להעלות לגיט (node_modules, .env)
-└── common.ts             # קובץ ממשקים (Interfaces) משותף לשרת ולקליינט
+```text
+├── server/               # Main server folder
+│   ├── config/           # Mongoose & AWS S3 configurations
+│   ├── middleware/       # Auth (isLoggedIn) & Upload middlewares
+│   ├── models/           # Mongoose Models (User.ts, Message.ts)
+│   ├── routes/           # REST API routes (auth.ts, users.ts)
+│   ├── schemas/          # Request validation schemas
+│   ├── sockets/          # WebSocket logic (chat.socket.ts)
+│   ├── server.ts         # Server entry point
+│   └── tsconfig.json     # TypeScript config
+├── .env                  # Environment variables (Hidden)
+├── .gitignore            # Git ignore list
+└── common.ts             # Shared Interfaces for Client/Server
